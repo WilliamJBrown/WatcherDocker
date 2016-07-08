@@ -1,4 +1,4 @@
-FROM mattsch/fedora-rpmfusion:latest
+FROM mattsch/fedora-rpmfusion:24
 MAINTAINER Matthew Schick <matthew.schick@gmail.com>
 
 # Install required packages
@@ -14,7 +14,7 @@ ENV LUID=1000 LGID=1000
 # Create the nzbhydra user/group
 RUN groupadd -g $LGID nzbhydra && \
     useradd -c 'NZBHydra User' -s /bin/bash -m -d /opt/nzbhydra -g $LGID -u $LUID nzbhydra
-    
+
 # Grab the installer, do the thing
 RUN git clone -q https://github.com/theotherp/nzbhydra.git /opt/nzbhydra/app && \
     chown -R nzbhydra:nzbhydra /opt/nzbhydra
@@ -25,8 +25,6 @@ EXPOSE 5075
 
 # Add script to copy default config if one isn't there and start nzbhydra
 COPY run-nzbhydra.sh /bin/run-nzbhydra.sh
- 
+
 # Run our script
 CMD ["/bin/run-nzbhydra.sh"]
-
-
