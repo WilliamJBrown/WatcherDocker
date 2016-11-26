@@ -12,4 +12,4 @@ fi
 # Set permissions
 chown -R watcher:watcher /config/ /opt/watcher
 
-exec runuser -l watcher -c 'python /opt/watcher/app/watcher.py --nobrowser --config /config/watcher.cfg --database /config/nzbhydra.db'
+exec runuser -l watcher -c 'python /opt/watcher/app/watcher.py --nobrowser --config /config/config.cfg'
