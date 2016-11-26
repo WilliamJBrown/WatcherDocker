@@ -20,7 +20,7 @@ RUN git clone -q https://github.com/nosmokingbandit/watcher /opt/watcher/app && 
 
 # Need a config and storage volume, expose proper port
 VOLUME /config
-EXPOSE 5075
+EXPOSE 9090 
 
 # Add script to copy default config if one isn't there and start nzbhydra
 COPY run-watcher.sh /bin/run-watcher.sh
