@@ -1,6 +1,8 @@
 # Watcher Docker Container
 
-Docker container for [Watcher](https://github.com/nosmokingbandit/watcher) using a lightweight Fedora build. 
+Docker container for [Watcher](https://github.com/nosmokingbandit/watcher) using a lightweight Fedora build.
+
+This is a automatic updating container. 
 
 ## Usage 
 
