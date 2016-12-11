@@ -8,7 +8,7 @@ RUN dnf install -yq git \
 
 # Set uid/gid (override with the '-e' flag), 1000/1000 used since it's the
 # default first uid/gid on a fresh Fedora install
-ENV LUID=1000 LGID=1000
+ENV LUID=0 LGID=0
 
 # Create the watcher user/group
 RUN groupadd -g $LGID watcher && \
