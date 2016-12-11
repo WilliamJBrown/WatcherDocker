@@ -27,4 +27,13 @@ That is what NZBGet reports to Watcher. So for our config when settings up docke
 
 This way when Watcher gets told the directory, docker will mount the same pathing for Watcher to access the files. 
 
+# Post-processing Scripts
+
+
+You will have to manually download the post processing scripts from:
+https://github.com/nosmokingbandit/watcher
+
+
+From there you will have to take the NZBGet or Sabnzb scripts and put them in your appropriate install directory for your choice of downloader. 
+
 
