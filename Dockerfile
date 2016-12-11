@@ -1,5 +1,5 @@
 FROM mattsch/fedora-rpmfusion:latest
-MAINTAINER William Brown  - williambroown@gmail.com
+MAINTAINER William Brown
 
 # Install required packages
 RUN dnf install -yq git \
@@ -19,7 +19,7 @@ RUN git clone -q https://github.com/nosmokingbandit/watcher /opt/watcher/app && 
     chown -R watcher:watcher /opt/watcher
 
 # Need a config and storage volume, expose proper port
-VOLUME /config /downloads /movies
+VOLUME /config /log /downloads /movies
 EXPOSE 9090 
 
 # Add script to copy default config if one isn't there and start nzbhydra
