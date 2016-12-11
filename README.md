@@ -33,6 +33,8 @@ This way when Watcher gets told the directory, docker will mount the same pathin
 You will have to manually download the post processing scripts from:
 https://github.com/nosmokingbandit/watcher
 
+You can locate the scripts in the [post scripts](https://github.com/nosmokingbandit/watcher/tree/master/post%20scripts) folder. 
+
 
 From there you will have to take the NZBGet or Sabnzb scripts and put them in your appropriate install directory for your choice of downloader. 
 
