@@ -13,7 +13,8 @@ docker create
 -v /path/to/config/dir:/config
 -v /path/to/log/dir:/log
 -v /path/to/movie/dir:/movie
--v /path/to/download/dir:/downloa
+-v /path/to/database.sqlite:/database
+-v /path/to/download/dir:/download
 -e LUID=1234 -e LGID=1234
     -p 9090:9090 --name=Watcher 
 ```
