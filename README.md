@@ -48,7 +48,7 @@ change that to
 
 serverhost = 0.0.0.0
 
-This way any computer can access the docker container. 
+This way any computer can access the docker container. This is done to prevent the app to be accessed from other computers by default. If you do change this setting to let other computers access the web-ui make sure to enable the password-protect web-ui in the server settings. 
 
 
 # Post-processing Scripts
