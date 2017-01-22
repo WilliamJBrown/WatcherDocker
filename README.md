@@ -6,6 +6,7 @@ Watcher is an automated movie NZB searcher and snatcher. You can add a list of w
 
 Watcher is a work in progress and plans to add more features in the future, but we will always prioritize speed and stability over features.
 
+
 ## Usage 
 
 ```bash
@@ -19,6 +20,7 @@ docker create
     -p 9090:9090 --name=Watcher 
 ```
 
+
 Due Note: The download directory needs to be the full path that your downloader (SabNZB or NZBGet) passes to the renamer to tell it where the file is located. 
 
 Example: I use nzbget and when a movie is finished it says where the file is located so Watcher can take that and move it. 
@@ -31,8 +33,25 @@ That is what NZBGet reports to Watcher. So for our config when settings up docke
 
 This way when Watcher gets told the directory, docker will mount the same pathing for Watcher to access the files. 
 
-# Post-processing Scripts
 
+# Accessing the web-ui
+
+If you wish to access the web-ui from a different computer. You will need to start the docker container and then shut it down.this will create a config file in your config path that you listed. 
+
+-v /path/to/config/dir:/config
+
+You will need to edit this file manually to allow other computers on the network to access the web-ui. You will want the change the serverhost value. eg:
+
+serverhost = 127.0.0.1
+
+change that to 
+
+serverhost = 0.0.0.0
+
+This way any computer can access the docker container. 
+
+
+# Post-processing Scripts
 
 You will have to manually download the post processing scripts from:
 https://github.com/nosmokingbandit/watcher
