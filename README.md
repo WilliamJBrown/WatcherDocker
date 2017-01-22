@@ -36,7 +36,7 @@ This way when Watcher gets told the directory, docker will mount the same pathin
 
 # Accessing the web-ui
 
-If you wish to access the web-ui from a different computer. You will need to start the docker container and then shut it down.this will create a config file in your config path that you listed. 
+If you wish to access the web-ui from a different computer. You will need to start the docker container and then shut it down. This will create a config file in your config path that you listed. 
 
 -v /path/to/config/dir:/config
 
