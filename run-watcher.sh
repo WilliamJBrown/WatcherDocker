@@ -12,4 +12,4 @@ fi
 # Set permissions
 chown -R watcher:watcher /config/ /opt/watcher
 
-exec runuser -l watcher -c 'python /opt/watcher/app/watcher.py --conf /config/config.cfg --log /log/ --db /database/database.sqlite'
+exec runuser -l watcher -c 'python /opt/watcher/app/watcher.py --conf /config/config.cfg --log /log/ --db /database/database.sqlite --plugins /plugins/'
