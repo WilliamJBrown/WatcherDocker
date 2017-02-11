@@ -19,7 +19,7 @@ RUN git clone -q https://github.com/nosmokingbandit/watcher.git /opt/watcher/app
     chown -R watcher:watcher /opt/watcher
 
 # Need a config and storage volume, expose proper port
-VOLUME /config /log /downloads /movies /db
+VOLUME /config /log /downloads /movies /db /plugins
 EXPOSE 9090 
 
 # Add script to copy default config if one isn't there and start nzbhydra
