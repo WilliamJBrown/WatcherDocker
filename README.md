@@ -14,8 +14,9 @@ docker create
 -v /path/to/config/dir:/config
 -v /path/to/log/dir:/log
 -v /path/to/movie/dir:/movie
--v /path/to/database:/database
+-v /path/to/database/dir:/database
 -v /path/to/download/dir:/download
+-v /path/to/plugins/dir:/plugins
 -e LUID=1234 -e LGID=1234
     -p 9090:9090 --name=Watcher 
 ```
