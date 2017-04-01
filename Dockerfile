@@ -3,7 +3,7 @@ MAINTAINER William Brown
 
 # Install required packages
 RUN dnf install -yq git \
-                    python && \
+                    python3 && \
     dnf clean all
 
 # Set uid/gid (override with the '-e' flag), 1000/1000 used since it's the
