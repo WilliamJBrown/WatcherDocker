@@ -15,8 +15,8 @@ RUN groupadd -g $LGID watcher && \
     useradd -c 'watcher User' -s /bin/bash -m -d /opt/watcher -g $LGID -u $LUID watcher
     
 # Grab the installer, do the thing
-RUN git clone -q https://github.com/nosmokingbandit/watcher.git /opt/watcher/app && \
-    chown -R watcher:watcher /opt/watcher
+RUN git clone -q https://github.com/nosmokingbandit/watcher3.git /opt/watcher3/app && \
+    chown -R watcher:watcher /opt/watcher3
 
 # Need a config and storage volume, expose proper port
 VOLUME /config /log /downloads /movies /db /plugins
