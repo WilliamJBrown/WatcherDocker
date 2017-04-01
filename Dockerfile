@@ -12,7 +12,7 @@ ENV LUID=750 LGID=750
 
 # Create the watcher user/group
 RUN groupadd -g $LGID watcher && \
-    useradd -c 'watcher User' -s /bin/bash -m -d /opt/watcher -g $LGID -u $LUID watcher
+    useradd -c 'watcher User' -s /bin/bash -m -d /opt/watcher3 -g $LGID -u $LUID watcher
     
 # Grab the installer, do the thing
 RUN git clone -q https://github.com/nosmokingbandit/watcher3.git /opt/watcher3/app && \
